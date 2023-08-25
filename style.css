@@ -1,5 +1,11 @@
-Button {
-    width: 81px;
+button {
+    font-family: Noto Sans JP;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 88px;
     height: 36px;
     border-radius: 6px;
     border: none;
@@ -9,21 +15,15 @@ Button {
         background: #AEAEAE;
     }
 }
-.outline {
-    font-family: Noto Sans JP;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #3D5AFE;
+button.outline {
+    --label-color: hsl(231, 99%, 62%);
     border: 1px solid #3D5AFE;
     background: transparent;
     &:hover, &:focus {
         background:#2962FF1A;
     }
 }
-.text {
+button.text {
     font-family: Noto Sans JP;
     font-size: 14px;
     font-weight: 500;
@@ -32,19 +32,52 @@ Button {
     text-align: center;
     color: #3D5AFE;
     background: transparent;
+    box-shadow: 0px 2px 3px 0px #33333300;
     &:hover, &:focus {
         background: #2962FF1A;
     }
 }
-.disable-shadow {
+button.disableShadow {
     box-shadow: 0px 0px 0px 0px #33333300;
-}
-.disabled {
-    color: #9E9E9E;
+    border: none;
+    background: #E0E0E0;
     &:hover, &:focus {
         background: #E0E0E0;
     }
 }
+button.disabled {
+    color: #9E9E9E;
+    background-color: #E0E0E0;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 3px 0px #33333333;
+    &:hover, &:focus {
+        background: #E0E0E0;
+    }
+}
+button.textDisabled {
+    color: #9E9E9E;
+    background-color: #e0e0e000;
+    outline: none;
+    border: none;
+    box-shadow: 0px 2px 3px 0px #33333300;
+    &:hover, &:focus {
+        background: #e0e0e000;
+    }
+}
+button.iconLeft {
+    align-items: center;
+}
+button.iconLeft  > .material-icons {
+    color: white;
+    float: left;
+}
+button.iconRight  > .material-icons {
+    color: white;
+    float: right;
+}
+
+
 
 /**  page styling below **/
 
@@ -55,8 +88,7 @@ Button {
     float: left;
     width: 20%;
     background: #FAFBFD;
-    ;
-
+    height: 100%;
 }
 .column-body {
     width:auto
