@@ -9,14 +9,15 @@ button {
     height: 36px;
     border-radius: 6px;
     border: none;
+    margin: 5px;
     background: #E0E0E0;
-    box-shadow: 0px 2px 3px 0px #33333333;
+    box-shadow: -3px 5px 5px 0px #0000008d;
     &:hover, &:focus {
         background: #AEAEAE;
     }
 }
 button.outline {
-    --label-color: hsl(231, 99%, 62%);
+    color: #bbc1e2;
     border: 1px solid #3D5AFE;
     background: transparent;
     &:hover, &:focus {
@@ -30,9 +31,9 @@ button.text {
     line-height: 20px;
     letter-spacing: 0em;
     text-align: center;
-    color: #3D5AFE;
+    color: #bbc1e2;
     background: transparent;
-    box-shadow: 0px 2px 3px 0px #33333300;
+    box-shadow: -3px 5px 5px 0px #0000008d;
     &:hover, &:focus {
         background: #2962FF1A;
     }
@@ -50,7 +51,7 @@ button.disabled {
     background-color: #E0E0E0;
     outline: none;
     border: none;
-    box-shadow: 0px 2px 3px 0px #33333333;
+    box-shadow: 0px 0px 0px 0px #33333300;
     &:hover, &:focus {
         background: #E0E0E0;
     }
@@ -80,18 +81,44 @@ button.iconRight  > .material-icons {
 
 
 /**  page styling below **/
+.containCheckBoxChoices{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.checkboxInLine{
+    grid-column: 1;
+    justify-self: right;
+    width: 15px;
+}
+.checkboxDescription{
+    grid-column: 2 / 4;
+}
+.checkboxInLineRow2{
+    width: 15px;
+    justify-self: right;
+    grid-column: 1;
+    grid-row: 2;
+}
+.checkboxDescriptionRow2{
+    grid-column: 2 / 4;
+}
 
-.row{
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
     margin-bottom: 15px;
 }
+
 .column-left {
-    float: left;
-    width: 20%;
-    background: #FAFBFD;
-    height: 100%;
+    background: #cbcbcb;
+    grid-column: 1;
 }
+
 .column-body {
-    width:auto
+    grid-column: 2;
+    padding: 15px;
+    color: white;
+    background: rgb(88, 107, 106);
 }
 .devchallenges {
     font-family: Poppins;
