@@ -1,3 +1,4 @@
+
 const button1 = document.getElementById("button1");
 const slider1 = document.getElementById("slider1");
 const nameDisplay = document.getElementById("buttonNameDisplay");
@@ -10,13 +11,16 @@ const checkboxDisableShadow = document.getElementById("disableShadow");
 const buttonsWithIcons = document.querySelectorAll("#buttonIcons");
 const checkboxIcons = document.getElementById("iconSideCheck");
 
-function classNameVariableDisableBtn(btn, shadow){
+let checkBoxDisableName = '';
+let checkBoxShadowDisableName = '';
+
+function setDisableBtnStyle(btn, shadow){
     buttonDisabled.className = btn + ' ' + shadow;
 }
 
-function classNameVariableSetArrays(nameToSet){
+function classNameVariableSetArrays(className){
     buttonsWithIcons.forEach(button => {
-        button.className = nameToSet;
+        button.className = className;
     });
 }
 
@@ -37,9 +41,6 @@ slider1.addEventListener('change', () => {
     }
     
 });
-
-let checkBoxDisableName = '';
-let checkBoxShadowDisableName = '';
 
 checkboxDisableBtn.addEventListener('change', (e) => {
     if (e.target.checked) checkBoxDisableName = 'disabled';
