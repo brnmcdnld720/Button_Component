@@ -1,3 +1,4 @@
+
 const button1 = document.getElementById("button1");
 const slider1 = document.getElementById("slider1");
 const nameDisplay = document.getElementById("buttonNameDisplay");
